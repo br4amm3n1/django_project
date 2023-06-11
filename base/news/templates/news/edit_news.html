@@ -1,0 +1,18 @@
+{% extends 'newwebpage/layout.html' %}
+
+{% block title %}Редактирование новости{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Редактор</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.annotation }}<br>
+            {{ form.full_text }}<br>
+            {{ form.date_write }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-dark">Добавить изменения</button>
+        </form>
+    </div>
+{% endblock %}

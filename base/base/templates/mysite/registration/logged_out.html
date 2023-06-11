@@ -1,0 +1,10 @@
+{% extends "./base_form_auth.html" %}
+
+{% block title %}
+    Выход из учетной записи
+{% endblock %}
+{% block content %}
+<h3>Вы вышли из своей учетной записи</h3>
+
+<a href="{% url 'login'%}" content="None">Нажми сюда, чтобы войти снова.</a>
+{% endblock %}

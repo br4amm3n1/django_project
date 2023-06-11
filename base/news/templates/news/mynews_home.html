@@ -1,0 +1,20 @@
+{% extends 'newwebpage/layout.html' %}
+
+{% block title %}Мои новости{% endblock %}
+{% block buttons %}
+<li><a href="{% url 'create' %}" class="btn btn-main">Добавить новость</a></li>
+{% endblock%}
+
+{% block content %}
+    <div class="features">
+        <h1>Мои новости</h1>
+        {% for item in news %}
+            <div class="alert alert-dark">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.annotation }}</p>
+                <a href="{% url 'news_content' item.id %}"><button class="btn btn-dark">Открыть содержание</button></a>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}

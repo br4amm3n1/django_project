@@ -1,0 +1,18 @@
+{% extends 'newwebpage/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block user %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Цвета играют жизненно важную роль в формировании внешнего вида веб-страниц.
+            С помощью CSS мы можем управлять основным цветом элементов и их фоновым цветом.</p>
+        <button class="btn btn-dark">Кнопка</button>
+        {% for el in values %}
+            <button class="btn btn-dark">{{ el }}</button>
+        {% endfor %}
+    </div>
+{% endblock %}
